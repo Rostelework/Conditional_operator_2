@@ -95,7 +95,7 @@ public class Main {
         Scanner scanner8 = new Scanner(System.in);
         System.out.print("Введите номер месяца: ");
         int monthNumber = scanner8.nextInt();
-        if (monthNumber >= 1 && monthNumber <= 12) {
+        if (monthNumber >= 1 && monthNumber <= 12) {  // ограничиваю интервал значений monthNumber от 1 до 12 включительно
             switch (monthNumber) {
                 case 12:
                 case 1:
@@ -118,7 +118,7 @@ public class Main {
                     System.out.println("Осень");
                     break;
             }
-        } else {
+        } else {                                            // блок срабатывает, если порядковый номер месяца больше 12
             System.out.println("Неверный номер месяца");
         }
     }
