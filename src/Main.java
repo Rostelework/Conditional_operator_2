@@ -48,18 +48,14 @@ public class Main {
         Scanner scanner5 = new Scanner(System.in);
         System.out.print("Укажите год создания Вашей операционной системы: ");
         int clientDeviceYear = scanner5.nextInt();
-        if (userOS == 0) {
-            if (clientDeviceYear < 2015) {
+        if (userOS == 0 && clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
+        } else if (userOS == 0 && clientDeviceYear >= 2015) {
                 System.out.println("Установите обычную версию приложения для iOS по ссылке");
-            }
-        } else if (userOS == 1) {
-            if (clientDeviceYear < 2015) {
+        } else if (userOS == 1 && clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
+        } else {
                 System.out.println("Установите обычную версию приложения для Android по ссылке");
-            }
         }
 
         System.out.println(" ");
@@ -122,7 +118,6 @@ public class Main {
                 break;
             default:
                 System.out.println("Неверный номер месяца");
-
         }
     }
 }
