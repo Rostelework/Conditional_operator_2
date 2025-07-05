@@ -95,29 +95,31 @@ public class Main {
         Scanner scanner8 = new Scanner(System.in);
         System.out.print("Введите номер месяца: ");
         int monthNumber = scanner8.nextInt();
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Весна");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Лето");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Осень");
-                break;
-            default:
-                System.out.println("Неверный номер месяца");
+        if (monthNumber >= 1 && monthNumber <= 12) {  // ограничиваю интервал значений monthNumber от 1 до 12 включительно
+            switch (monthNumber) {
+                case 12:
+                case 1:
+                case 2:
+                    System.out.println("Зима");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    System.out.println("Весна");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    System.out.println("Лето");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    System.out.println("Осень");
+                    break;
+            }
+        } else {                                            // блок срабатывает, если порядковый номер месяца больше 12
+            System.out.println("Неверный номер месяца");
         }
     }
 }
